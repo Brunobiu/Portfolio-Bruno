@@ -4542,3 +4542,80 @@ td:last-child {
 .contact-info a:hover {
     text-decoration: underline;
 }
+
+
+
+
+    /* Aumenta a largura e melhora legibilidade da descrição no GLightbox */
+    .glightbox-container .gslide-description {
+    width: min(92vw, 820px) !important;   /* mais largo e responsivo */
+    max-width: 820px !important;
+    margin: 0 auto !important;
+    }
+
+    .glightbox-container .gslide-description .gdesc-inner {
+    padding: 16px 18px !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    text-align: center;                   /* pode trocar pra left se preferir */
+    }
+
+    /* Links mais visíveis */
+    .glightbox-container .gslide-description a {
+    text-decoration: underline;
+    font-weight: 600;
+    }
+
+    /* Em telas maiores, deixa ainda mais confortável */
+    @media (min-width: 900px) {
+    .glightbox-container .gslide-description {
+        width: min(70vw, 920px) !important;
+        max-width: 920px !important;
+    }
+    .glightbox-container .gslide-description .gdesc-inner {
+        font-size: 16px !important;
+    }
+    }
+
+
+/* ===== GLIGHTBOX: ajustar posicionamento (MOBILE) ===== */
+    @media (max-width: 768px) {
+
+    /* tira o espaço gigante do container */
+    .glightbox-container .gslide-inner-content,
+    .glightbox-container .ginner-container {
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding-top: 12px !important;
+    }
+
+    /* controla o tamanho da imagem pra não empurrar tudo */
+    .glightbox-container .gslide-media {
+        max-height: 38vh !important;   /* diminui um pouco */
+        overflow: hidden !important;
+        margin: 0 auto 12px !important;
+    }
+
+    .glightbox-container .gslide-media img {
+        max-height: 38vh !important;
+        width: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+
+    /* descrição ocupa melhor a tela */
+    .glightbox-container .gslide-description,
+    .glightbox-container .gdesc {
+        margin-top: 0 !important;
+        max-width: 94vw !important;
+    }
+
+    /* se o texto for grande, deixa rolar só o texto */
+    .glightbox-container .gdesc-inner {
+        max-height: 45vh !important;
+        overflow: auto !important;
+    }
+    }
+
+
+    
